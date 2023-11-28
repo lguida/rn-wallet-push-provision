@@ -1,8 +1,8 @@
-@objc(MovenRnWalletModuleViewManager)
-class MovenRnWalletModuleViewManager: RCTViewManager {
+@objc(RnWalletModuleViewManager)
+class RnWalletModuleViewManager: RCTViewManager {
 
-  override func view() -> (MovenRnWalletModuleView) {
-    return MovenRnWalletModuleView()
+  override func view() -> (RnWalletModuleView) {
+    return RnWalletModuleView()
   }
 
   @objc override static func requiresMainQueueSetup() -> Bool {
@@ -10,7 +10,7 @@ class MovenRnWalletModuleViewManager: RCTViewManager {
   }
 }
 
-class MovenRnWalletModuleView : UIView {
+class RnWalletModuleView : UIView {
 
   @objc var color: String = "" {
     didSet {

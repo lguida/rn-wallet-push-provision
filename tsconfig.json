@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-moven-rn-wallet-module": ["./src/index"]
+      "rn-wallet-push-provision": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

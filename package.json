@@ -1,6 +1,6 @@
 {
-  "name": "react-native-moven-rn-wallet-module",
-  "version": "0.1.0",
+  "name": "rn-wallet-push-provision",
+  "version": "0.1.8",
   "description": "Native code for in-app digital wallet provisioning",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -26,26 +26,30 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-moven-rn-wallet-module-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "clean": "del-cli android/build lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "format": "prettier --write src",
+    "format:ci": "prettier --check src"  
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/lucy-moven/moven-rn-wallet-module",
-  "author": "Lucy Guida <[<u>lucy@moven.com</u>](mailto:lucy@moven.com)> (https://moven.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lguida/rn-wallet-push-provision.git"
+  },
+  "author": "Lucy Guida <u> (mailto:lucy@moven.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucy-moven/moven-rn-wallet-module/issues"
+    "url": "https://github.com/lguida/rn-wallet-push-provision/issues"
   },
-  "homepage": "https://github.com/lucy-moven/moven-rn-wallet-module#readme",
+  "homepage": "https://github.com/lguida/rn-wallet-push-provision#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -79,9 +83,6 @@
     "react": "*",
     "react-native": "*"
   },
-  "workspaces": [
-    "example"
-  ],
   "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"
@@ -89,7 +90,6 @@
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
   },
